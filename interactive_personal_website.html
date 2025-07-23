@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>interactive-personal-website</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+
+    <button class="screen-btn" id="home">Home</button>
+    <button class="screen-btn" data-screen="screen-one">About Me</button>
+    <button class="screen-btn" data-screen="screen-two">My Gallery</button>
+    <button class="screen-btn" data-screen="screen-three">My Projects</button>
+    <button class="social-screen-btn" id = "my-social-button">My Socials</button>
+    
+    
+
+<div id="home-screen" class="screen-hidden">
+  <div id="quote-box">
+    <p id="quote-text"></p>
+    <p id="quote-author"></p>
+  </div>
+</div>
+
+</div>
+
+
+    <div id="screen-one" class="screen">
+        <div class="about-content">
+        <h1>Mark Antonio</h1>
+        </div> 
+        <div class="about-text">
+        <p>
+          Hey there! I'm Mark, a passionate software developer with a love for
+          technology and a curiosity that takes me all over the world—and to the
+          beach whenever I can! I'm proud to call British Columbia my home,
+          though my roots trace back to the beautiful islands of the
+          Philippines. My journey has also taken me to Singapore, where I had
+          the privilege of living and working for four years, expanding my
+          horizons and learning from new experiences.
+        </p>
+        <p>
+          Creativity is a big part of who I am too. When I'm not coding or
+          diving into new tech, I express myself through hobbies like 3D
+          printing with a 3D pen, capturing moments in toy photography, or
+          bringing stories to life with action figure stop-motion clips. These
+          outlets keep my mind active and give me the perfect balance of fun and
+          creativity.
+        </p>
+        <p>
+          Travel is one of my greatest joys. I've explored places like Japan,
+          London, Egypt, and more, but at heart, I'm just as much a homebody who
+          loves to unwind or by immersing myself in my gaming consoles or with
+          mobile games,.
+        </p>
+        <p>
+          I'm also a lifelong Pokémon fan—I've been hooked on Pokémon Go since
+          it launched in 2016, and there's something magical about exploring the
+          world while catching Pokémon, reliving a bit of that childhood
+          excitement.
+        </p>
+        <p>
+          And speaking of magic, I've always been enchanted by the Harry Potter
+          universe. Whether it's revisiting the books, watching the movies, or
+          debating which house I belong to (Gryffindor for sure!), Harry Potter
+          has a special place in my heart. The themes of friendship, courage,
+          and magic resonate with me deeply, and I'll always have a soft spot
+          for the wizarding world.
+        </p>
+        <p>
+          Currently, I'm excited about my journey into the tech world after
+          completing a software developer bootcamp. I'm eager to start my career
+          as a junior developer, ready to tackle challenges, grow, and create
+          things that make a difference. Coding, problem-solving, and dreaming
+          up new solutions are what fuel my passion for tech.
+        </p>
+        <p>
+          While I'm focused on building my career, I always make time for travel
+          and the thrill of discovering new places. Still, there's nothing quite
+          like the quiet comfort of a cozy day at home, where I can unwind with
+          a book (usually something magical) or a game.
+        </p>
+        <p>
+            I'm excited for what's next and look forward to connecting with others
+            who share my passions or are on a similar path. Let's create something
+            amazing together!
+        </p>
+    </div>
+</div>
+
+<div id="screen-two" class="screen">
+  <div id="album-buttons">
+    <button class="album-btn" data-album="album1">Just Me</Menu></button>
+    <button class="album-btn" data-album="album2">Adventures with my wife</button>
+    <button class="album-btn" data-album="album3">Toy Photography</button>
+  </div>
+  
+
+  <div class="album-view hidden" id="album1">
+    <img src="./images/about me/bali_surfboard.JPG" alt="surfboard">
+    <img src="./images/about me/gum_wall_SEA.jpg" alt="gum_wall_SEA">
+    <img src="./images/about me/me_japan.JPG" alt="japan">
+    <img src="./images/about me/mountain_drop_view.JPG" alt="mountain">
+    <img src="./images/about me/platform_9_3_4.jpg" alt="platform 9 3/4">
+    <img src="./images/about me/skiing.jpg" alt="skiing">
+    <img src="./images/about me/WB_Studios_dumbledor_ofc.jpg" alt="dumbledoor office">
+  </div>
+  
+  <div class="album-view hidden" id="album2">
+    <img src="./images/adventures with wife/edinburough_castle_w_wife.jpg" alt="Edinburough castle">
+    <img src="./images/adventures with wife/gumwall_w_wife.JPG" alt="gumwall">
+    <img src="./images/adventures with wife/inside_tower_bridge_w_wife.jpg" alt="inside the tower bridge">
+    <img src="./images/adventures with wife/MY_foodtrip.JPG" alt="Malaysian foodtrip">
+    <img src="./images/adventures with wife/northern_lights.jpg" alt="northern lights">
+    <img src="./images/adventures with wife/Osaka.jpg" alt="Osaka">
+    <img src="./images/adventures with wife/Osaka_castle.jpg" alt="Osaka castle">
+    <img src="./images/adventures with wife/platform_9_3:4.JPEG" alt="platform 9 3/4">
+    <img src="./images/adventures with wife/pumpkin_patch_w_wife.jpg" alt="pumpkin patch">
+    <img src="./images/adventures with wife/SEA_Public_market_w_wife.JPG" alt="Seattle Public Market">
+    <img src="./images/adventures with wife/steam_clock.jpg" alt="steam clock">
+    <img src="./images/adventures with wife/tower_bridge_londgon.jpg" alt="tower bridge london">
+  </div>
+  
+  <div class="album-view hidden" id="album3">
+    <img src="./images/toyphotography/denji.jpg" alt="Denji">
+    <img src="./images/toyphotography/ichigo_peeing.jpg" alt="Ichigo">
+    <img src="./images/toyphotography/luffy.jpg" alt="Luffy">
+    <img src="./images/toyphotography/party_scene.jpg" alt="Party Scene">
+    <img src="./images/toyphotography/pikachu_at_steveston.jpg" alt="Pikachu at Steveston">
+    <img src="./images/toyphotography/pikachu_cliff.jpg" alt="Pikachu cliff">
+  </div>
+
+</div>
+
+<div id="screen-three" class="screen">
+
+    <div id="rpsls-launcher">
+        <img src="./images/game-RPSLS/RPSLS-icon.png" alt="game icon">
+    </div>
+    
+    <div id="rpsls-game" class="hidden">
+        
+        <div class="game-container">
+            <button id="exit-game-btn" class="exit-btn">x</button>
+            <h2>Rock Paper Scissors Lizard Spock</h2>
+            <div class="game-cntrl-btn">       
+            <button id="show-rules-btn" class="rules-btn">Show Rules
+            </button> </div>
+            <div class="buttons">
+                <button data-move="rock">
+                    <img src="./images/game-RPSLS/rock.png" alt="Rock" width="60" />
+                </button>
+                <button data-move="paper">
+                    <img src="./images/game-RPSLS/paper.png" alt="Paper" width="60" />
+                </button>
+                <button data-move="scissors">
+                    <img src="./images/game-RPSLS/scissors.png" alt="Scissors" width="60" />
+                </button>
+                <button data-move="lizard">
+                    <img src="./images/game-RPSLS/lizard.png" alt="Lizard" width="60" />
+                </button>
+                <button data-move="spock">
+                    <img src="./images/game-RPSLS/spock.png" alt="Spock" width="60" />
+                </button>
+            </div>
+            
+            <div class="results">
+                <h2 id="result"></h2>
+                <div class="images">
+                    <div>
+                        <img id="player-img" src="./images/game-RPSLS/you.png" alt="Your choice" />
+                    </div>
+                    <div class="computer">
+                        <img
+                        id="computer-img"
+                        src="./images/game-RPSLS/computer.png"
+                        alt="Computer choice"
+                        />
+                    </div>
+                </div>
+                <section id="choice-result">
+                    <p id="player-choice"></p>
+                    <p id="computer-choice"></p>
+                </section>
+                <div class="scoreboard">
+                    Wins: <span id="wins">0</span> |
+                    Losses: <span id="losses">0</span> |
+                    Draws: <span id="draws">0</span>
+                </div>
+              <div class="game-cntrl-btn">
+          <button id="reset-btn" class="reset-btn">Reset Game</button>
+        </div>
+      </div>
+      </div>
+  
+      <div id="rules-modal" class="modal">
+        <div class="modal-content">
+          <div class="game-rules">
+            <h2>Rules</h2>
+            </div>
+          <ul>
+            <li>Scissors cuts Paper</li>
+            <li>Paper covers Rock</li>
+            <li>Rock crushes Lizard</li>
+            <li>Lizard poisons Spock</li>
+            <li>Spock smashes Scissors</li>
+            <li>Scissors decapitates Lizard</li>
+            <li>Lizard eats Paper</li>
+            <li>Paper disproves Spock</li>
+            <li>Spock vaporizes Rock</li>
+            <li>..and as it always has, Rock crushes Scissors</li>
+          </ul>
+          <button id="close-rules-btn" class="modal-close">Close
+    </div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+    <div id="screen-four" class="screen">
+      <h2>My Socials</h2>
+    </div>
+    <footer>
+      <div id="socialPanel" class ="socials-panel hidden">
+            <a href="https://www.linkedin.com/in/markfrancisantonio/"
+              target="_blank">markfrancisantonio <img class="social-icon" src="./images/icons/LinkedIn.png" alt="linkedin icon"> 
+            </a>
+            <a href="https://www.facebook.com/moxidiced" target="_blank">moxidiced <img class="social-icon" src="./images/icons/facebook.png" alt="facebook icon"> 
+            </a>
+            <a href="https://www.instagram.com/moxidiced/" target="_blank">moxidiced <img class="social-icon" src="./images/icons/Instagram.png" alt="personal instagram"> 
+            </a>
+            <a href="https://www.instagram.com/whenmoxplays" target="_blank">whenmoxplays <img class="social-icon" src="./images/icons/Instagram.png" alt="hobby page instagram"> 
+            </a>
+            </div>
+        
+      </div>
+      
+    </footer>
+  </body>
+</html>

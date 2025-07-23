@@ -1,0 +1,531 @@
+/* General  */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+    line-height: 1.5rem; 
+    background-color: rgb(16, 16, 16);
+    color: white; 
+}
+
+
+h1, 
+h2, 
+h3, 
+h4 {
+    margin: 10px auto; 
+    padding: 10px; 
+    text-align: center;
+}
+
+button {
+  font-size: 1rem; 
+  padding: 0.5rem 1rem; 
+  border: none; 
+  border-radius: 8px;
+  cursor: pointer; 
+  background-color: #d0e6ff; 
+}
+
+.screen-btn {
+  display: flex; 
+  justify-content: center; 
+}
+
+button:hover {
+  background-color: #a4ceff; 
+}
+
+
+/* Home screen quote box */
+
+#quote-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: gold;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* for glowing effect */
+    animation: fadeIn 1s ease-in-out; /* for smooth fade-in animation */
+    text-align: center; 
+    margin: 20px; 
+    border: 1px solid gold; 
+    max-width: 800px; 
+}
+
+#quote-text {
+    font-family: 'Dancing Script', cursive; 
+    font-size: 1.5rem; 
+    font-style: italic; 
+    white-space: pre-wrap; /* Preserve line breaks in the text */
+    color: white;
+    text-align: left;
+}
+
+#quote-text.error {
+    color: red; 
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    font-style: normal; 
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+/* Quote author */
+#quote-author {
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    margin-top: 10px; 
+    color: lightgoldenrodyellow; 
+    opacity: 0; /* Hidden at first for fade-in effect */
+    transition: opacity 1s ease; /* For smooth fade-in effect */
+    font-family: 'Courier New', monospace;
+    text-align: end;
+}
+
+/* thanks to chatgpt for this fade in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+        transform: scale(0.9); /* Start slightly smaller */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+        transform: scale(1); /* End at normal size */
+    }
+}
+
+/* Screens (About Me, Gallery, Projects) */
+.screen {
+    border: 5px solid gold; 
+    margin-top: 10px;
+    height: 800px; 
+    display: none; 
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    padding: 40px 20px; 
+    box-sizing: border-box; 
+    min-width: 375px; 
+}
+
+.screen.active {
+    display: flex; 
+}
+
+/* About Me screen */
+div.screen#screen-one {
+    flex-direction: column; 
+}
+
+#screen-one {
+    background-image: url('./images/about me/profile_photo.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.about-content h1 {
+    font-family: 'Pacifico', cursive; 
+    font-size: 3em; 
+    color: rgb(212, 195, 129); 
+    text-shadow: 4px 4px 10px rgb(149, 30, 30);
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.about-content h1:hover {
+    transform: scale(1.1); 
+    color: rgb(0, 0, 0); 
+    text-shadow: 1px 1px 10px gold;
+}
+
+
+.about-text {
+    text-align: justify; 
+    padding: 0 20px; 
+    line-height: 1.2; 
+    font-size: 1.1rem; 
+    max-width: 100%; 
+    color: cornsilk;
+}
+
+/* Buttons */
+button.screen-btn {
+    display: inline-block; 
+    text-decoration: none; 
+    color: gold; 
+    font-size: 1em; 
+    padding: 5px 10px; 
+    border: 1px solid gold; 
+    border-radius: 20px; 
+    background-color: black; 
+    text-align: center; 
+    cursor: pointer; 
+    justify-items: space-between; 
+}
+
+/* Buttons hover effect */
+button.screen-btn:hover {
+    background-color: gold; 
+    color: black; 
+}
+
+/* Buttons */
+button.social-screen-btn {
+  display: inline-block; 
+  text-decoration: none; 
+  color: gold; 
+  font-size: 1em; 
+  padding: 5px 10px; 
+  border: 1px solid gold; 
+  border-radius: 20px; 
+  background-color: black; 
+  text-align: center; 
+  cursor: pointer; 
+  justify-items: space-between; 
+}
+
+/* Buttons hover effect */
+button.social-screen-btn:hover {
+  background-color: gold; 
+  color: black; 
+}
+
+
+/* My Gallery */
+
+
+
+.album-view {
+  display: inline-block;
+  gap: 1rem;
+  margin-top: 1rem;
+  min-width: 250px;
+}
+
+.album-view.hidden {
+  display: none;
+}
+
+#screen-two {
+  padding: 10px;
+}
+.album-btn {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #444;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 150px;
+}
+
+#album-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  background-color: gray;
+  margin: 10px;
+}
+.album-btn:hover {
+  background-color: #666;
+}
+
+.album-view img {
+  width: auto;
+  height: 300px;
+}
+
+
+/* Social panel (stick to right) */
+.socials-panel {
+    position: fixed; 
+    bottom: 0;
+    right: 0; 
+    background: black; 
+    border-top-left-radius: 20px; 
+    border-top-right-radius: 20px; 
+    padding: 20px; 
+    box-shadow: 0 -2px 10px rgba(104, 104, 104, 1); 
+    text-align: center; 
+    transform: translateY(100%); /* Hide the panel initially */
+    transition: transform 0.3s ease; /* Smooth slide-in effect */
+    display: flex;
+    flex-direction: column;
+    align-items: end; 
+}
+
+.socials-panel.show {
+    transform: translateY(0); /* Slide the panel left */
+}
+
+/* Social media icons */
+.socials-panel a {
+    margin: 10px 0; 
+    text-decoration: none; 
+    color: white;
+    font-style: italic;
+    font-size: small;
+}
+
+.hidden {
+    display: none; 
+}
+
+img {
+    height: auto; 
+    width: 50px; 
+}
+
+img.social-icon {
+  height: auto;
+  width: 30px;
+}
+
+
+/* Changes when screen gets larger */
+@media (min-width: 600px) {
+    #screen-one {
+        background-size: contain;
+    }
+}
+
+@media (min-width: 800px) {
+    .about-content h1 {
+        font-size: 3.5em; 
+    }
+    .about-text {
+        font-size: 1.4em; 
+        line-height: 1.4; 
+    }
+}
+
+@media (min-width: 1000px) {
+    .about-content h1 {
+        font-size: 4.5em; 
+    }
+    .about-text {
+        font-size: 1.5em; 
+        line-height: 1.4; 
+    }
+}
+
+
+
+/* // GAME // */
+/* Rock Paper Scissors Lizard Spock game */
+#rpsls-launcher {
+    cursor: pointer; 
+    width: 100px; 
+    height: 100px; 
+    margin: 0 auto; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: gold; 
+    border: 1px solid black; 
+    border-radius: 10px; 
+    padding: 0; 
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.2s ease; 
+    overflow: hidden; 
+    box-shadow: 0 0 10px gold; 
+}
+
+#rpsls-launcher:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 0px 20px gold;
+}
+
+#rpsls-launcher:active {
+    transform: scale(0.95); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+
+#rpsls-launcher img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+.rpsls-game.hidden {
+    display: none; 
+}
+
+
+.game-container {
+    background: rgb(0, 0, 0); 
+    border-radius: 16px; 
+    border: 0.1px solid white;
+    padding: 1rem;
+    max-width: 800px;
+    min-width: 350px;
+    margin: auto; 
+    box-shadow: 0 10px 25px rgba(115, 115, 115, 0.5); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    position: absolute; 
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+.buttons button,
+.reset-btn {
+    margin: 0.5rem; 
+    padding: 0.6rem 1rem;
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    background-color: black; 
+    transition: background-color 0.3s ease; 
+}
+
+.buttons button:hover,
+.reset-btn:hover {
+    background-color: aquamarine; 
+}
+
+.results {
+    margin-top: 1rem;
+}
+
+/* Results */
+.result-win {
+    color: rgb(21, 255, 0);
+}
+
+.result-lose {
+    color: red; 
+}
+
+.result-draw {
+    color: yellow;
+}
+
+#result {
+    font-size: 2rem;
+}
+
+#choice-result {
+    display: flex; 
+    justify-content: spacce-around; 
+    margin: 0 auto; 
+}
+
+.images {
+    display: flex; 
+    justify-content: center; 
+    gap: 2rem; 
+    margin-top: 1rem; 
+}
+
+.images div {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.images img {
+    width: 100px; 
+    height: 100px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    border-radius: 10px; 
+    object-fit: contain;
+    transform: rotate(45deg) scaleX(-1); 
+}
+
+.images .computer img {
+    transform: rotate(-45deg) scaleX(1); 
+}
+
+.winner {
+    transform: scale(1.1) rotate(90deg); 
+    box-shadow: 0 0 15px 5px gold;
+}
+
+.computer .winner {
+    transform: scale(1) rotate(90deg) scaleX(1);
+}
+
+.scoreboard {
+    margin-top: 1.5rem; 
+    font-size: 1.1rem;
+    color: cyan;
+    display: flex; 
+    justify-content: center; 
+}
+
+.reset-btn {
+    margin-top: 1rem; 
+    background-color: #ffcccc; 
+}
+
+/* Game rules mini screen */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.6); 
+}
+
+.modal-content {
+    background: black; 
+    color: khaki;
+    padding: 2rem; 
+    max-width: 500px; 
+    margin: 10% auto;
+    border-radius: 12px;
+    border: 1px solid yellow; 
+    position: relative; 
+    box-shadow: 0 0 10px 10px rgba(255, 215, 0, 0.2)
+}
+
+.modal-close {
+    margin-top: 1rem; 
+}
+
+.rules-btn {
+    margin-bottom: 1rem; 
+}
+
+#btn-close-rules {
+    display: flex; 
+    justify-content: flex-end;
+}
+
+/* Game control buttons */
+.game-cntrl-btn {
+    display: flex; 
+    justify-content: center; 
+}
+
+.exit-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0px 5px 3px 5px;
+    border-radius: 3px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: absolute; 
+    top: -5px; 
+    right: -5px;
+    font-size: 0.9rem; 
+    font-weight: bold; 
+}
+
+.exit-btn:hover {
+    background-color: red;
+    transform: scale(1.2)
+  
+}
